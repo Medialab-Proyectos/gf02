@@ -3,6 +3,8 @@
 import Image from "next/image"
 import { Instagram } from "lucide-react"
 
+const PRIVACY_POLICY_URL = "/privacy"
+
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -25,6 +27,12 @@ export function Footer() {
               <span className="text-2xl font-bold text-[#E5DCC5]">{""}</span>
             </button>
             <p className="text-[#A6A4A1] font-body italic">Made by enthusiasts. Built for every story.</p>
+            <a
+              href={PRIVACY_POLICY_URL}
+              className="inline-flex text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
+            >
+              Privacy Policy
+            </a>
           </div>
 
           <div className="flex justify-start md:justify-end items-start">

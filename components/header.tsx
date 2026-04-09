@@ -6,6 +6,8 @@ import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 
+const PRIVACY_POLICY_URL = "/privacy"
+
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -71,6 +73,12 @@ export function Header() {
             >
               Testimonials
             </button>
+            <a
+              href={PRIVACY_POLICY_URL}
+              className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
+            >
+              Privacy Policy
+            </a>
             <Button
               onClick={() => scrollToSection("waitlist")}
               className="bg-[#C9B68F] hover:bg-[#B49F79] text-[#1E1F22] font-semibold"
@@ -117,6 +125,13 @@ export function Header() {
               >
                 Testimonials
               </button>
+              <a
+                href={PRIVACY_POLICY_URL}
+                className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body text-left py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Privacy Policy
+              </a>
               <Button
                 onClick={() => scrollToSection("waitlist")}
                 className="bg-[#C9B68F] hover:bg-[#B49F79] text-[#1E1F22] font-semibold w-full"
