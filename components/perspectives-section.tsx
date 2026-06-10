@@ -72,10 +72,10 @@ export function PerspectivesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className={`relative rounded-xl p-8 flex flex-col gap-6 border transition-all duration-300 ${
+              className={`group relative rounded-xl p-8 flex flex-col gap-6 border transition-all duration-300 hover:-translate-y-1.5 ${
                 p.featured
-                  ? "bg-[#C9B68F]/10 border-[#C9B68F]/50 shadow-[0_0_40px_rgba(201,182,143,0.12)]"
-                  : "bg-[#232527] border-[rgba(255,255,255,0.06)] hover:border-[#C9B68F]/30 hover:shadow-[0_0_30px_rgba(201,182,143,0.08)]"
+                  ? "bg-[#C9B68F]/10 border-[#C9B68F]/50 shadow-[0_0_40px_rgba(201,182,143,0.12)] hover:shadow-[0_8px_56px_rgba(201,182,143,0.2)]"
+                  : "bg-[#232527] border-[rgba(255,255,255,0.06)] hover:border-[#C9B68F]/30 hover:shadow-[0_8px_40px_rgba(201,182,143,0.1)]"
               }`}
             >
               {p.featured && (
@@ -109,7 +109,7 @@ export function PerspectivesSection() {
                 }`}
               >
                 {p.cta}
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </motion.div>
           ))}

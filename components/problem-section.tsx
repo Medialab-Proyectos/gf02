@@ -49,9 +49,9 @@ export function ProblemSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="bg-[#232527] rounded-xl p-8 border border-[rgba(255,255,255,0.06)] flex flex-col gap-4"
+              className="group bg-[#232527] rounded-xl p-8 border border-[rgba(255,255,255,0.06)] flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#C9B68F]/40 hover:shadow-[0_8px_32px_rgba(201,182,143,0.1)]"
             >
-              <div className="p-3 bg-[#C9B68F]/10 rounded-lg w-fit">
+              <div className="p-3 bg-[#C9B68F]/10 rounded-lg w-fit transition-all duration-300 group-hover:bg-[#C9B68F]/20 group-hover:scale-110">
                 <col.icon className="w-6 h-6 text-[#C9B68F]" />
               </div>
               <h3 className="text-xl font-semibold text-[#E5DCC5]">{col.title}</h3>

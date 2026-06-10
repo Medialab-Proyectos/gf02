@@ -76,7 +76,7 @@ export function EcosystemSection() {
             {/* Center node */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative z-10 flex flex-col items-center gap-2">
-                <div className="w-20 h-20 rounded-full bg-[#C9B68F] flex items-center justify-center shadow-[0_0_40px_rgba(201,182,143,0.35)]">
+                <div className="gf-pulse w-20 h-20 rounded-full bg-[#C9B68F] flex items-center justify-center">
                   <Car className="w-10 h-10 text-[#1E1F22]" />
                 </div>
                 <span className="text-[#C9B68F] text-xs font-semibold tracking-widest uppercase">Vehicle</span>
@@ -100,7 +100,7 @@ export function EcosystemSection() {
                     transform: "translate(-50%, -50%)",
                   }}
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#232527] border border-[#C9B68F]/30 flex items-center justify-center hover:border-[#C9B68F] hover:bg-[#C9B68F]/10 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-full bg-[#232527] border border-[#C9B68F]/30 flex items-center justify-center hover:border-[#C9B68F] hover:bg-[#C9B68F]/10 hover:scale-110 hover:shadow-[0_0_20px_rgba(201,182,143,0.25)] transition-all duration-300 cursor-default">
                     <node.icon className="w-5 h-5 text-[#C9B68F]" />
                   </div>
                   <span className="text-[#A6A4A1] text-[10px] font-body text-center leading-tight max-w-[80px] whitespace-normal">
