@@ -68,23 +68,17 @@ export function Header() {
             >
               Who It&apos;s For
             </button>
-            <a
+            <Link
               href="/about"
               className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
             >
               About
-            </a>
-            <a
-              href={PRIVACY_POLICY_URL}
-              className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
-            >
-              Privacy
-            </a>
+            </Link>
             <Button
               onClick={() => scrollToSection("waitlist")}
               className="bg-[#C9B68F] hover:bg-[#B49F79] text-[#1E1F22] font-semibold"
             >
-              Join Waitlist
+              Join GarageFolio
             </Button>
           </nav>
 
@@ -118,27 +112,27 @@ export function Header() {
                 onClick={() => scrollToSection("perspectives")}
                 className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body text-left py-2"
               >
-                Who It&apos;s For
+                {"Who It's For"}
               </button>
-              <a
+              <Link
                 href="/about"
                 className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body text-left py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
-              </a>
+              </Link>
               <a
                 href={PRIVACY_POLICY_URL}
                 className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body text-left py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Privacy
+                Privacy Policy
               </a>
               <Button
                 onClick={() => scrollToSection("waitlist")}
                 className="bg-[#C9B68F] hover:bg-[#B49F79] text-[#1E1F22] font-semibold w-full"
               >
-                Join Waitlist
+                Join GarageFolio
               </Button>
             </nav>
           </motion.div>

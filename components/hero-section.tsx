@@ -40,7 +40,7 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto leading-7 tracking-normal my-[-106px] pt-0">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto leading-7 tracking-normal">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

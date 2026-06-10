@@ -15,17 +15,16 @@ export function Footer() {
     <footer className="bg-[#111214] border-t border-[rgba(255,255,255,0.1)] py-16 px-4">
       <div className="container mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 mb-12">
-          {/* Logo and Tagline */}
-          <div className="space-y-3">
+          {/* Logo, tagline and nav links */}
+          <div className="space-y-4">
             <button onClick={scrollToTop} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <Image
                 src="/garagefolio-logo.svg"
-                alt="Garagefolio"
+                alt="GarageFolio"
                 width={40}
                 height={40}
                 className="size-28 h-[33px]"
               />
-              <span className="text-2xl font-bold text-[#E5DCC5]">{""}</span>
             </button>
             <p className="text-[#A6A4A1] font-body italic">Made by enthusiasts. Built for every story.</p>
             <div className="flex flex-col gap-2">
@@ -44,6 +43,7 @@ export function Footer() {
             </div>
           </div>
 
+          {/* CTA + Social */}
           <div className="flex flex-col justify-start md:items-end gap-4">
             <Link
               href="/#waitlist"
@@ -56,20 +56,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors"
-              aria-label="Follow us on Instagram"
-            >
-              <Instagram className="w-8 h-8" />
-            </a>
-          </div>
-          </div>
-
-          <div className="flex justify-start md:justify-end items-start">
-            <a
-              href="https://www.instagram.com/garagefolio?igsh=MTZxb2xsd213NmIzZg=="
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors"
-              aria-label="Follow us on Instagram"
+              aria-label="Follow GarageFolio on Instagram"
             >
               <Instagram className="w-8 h-8" />
             </a>
