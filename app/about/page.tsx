@@ -14,12 +14,21 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero */}
-      <section className="pt-40 pb-20 px-4">
-        <div className="container mx-auto max-w-3xl text-center">
+      <section className="relative pt-40 pb-24 px-4 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/about-hero-bg.png)" }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-[#111214]/70 via-[#111214]/55 to-[#111214]"
+          aria-hidden="true"
+        />
+        <div className="container mx-auto max-w-3xl text-center relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold text-[#E5DCC5] mb-6 text-balance leading-tight">
             About <span className="text-[#C9B68F]">GarageFolio</span>
           </h1>
-          <p className="text-[#A6A4A1] font-body text-xl leading-relaxed">
+          <p className="text-[#E5DCC5] font-body text-xl leading-relaxed text-shadow-strong">
             We&apos;re building the layer that connects the people who already create vehicle history into a shared record that&apos;s preserved, organized, and credible.
           </p>
         </div>

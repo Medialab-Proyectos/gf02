@@ -18,6 +18,8 @@ const perspectives = [
     ],
     cta: "Learn More",
     href: "/about",
+    image: "/persona-enthusiast.png",
+    alt: "Car enthusiast documenting their classic car in a home garage",
   },
   {
     icon: Building2,
@@ -32,6 +34,8 @@ const perspectives = [
     cta: "Learn More",
     href: "/about",
     featured: true,
+    image: "/persona-storage.png",
+    alt: "Professional steward inspecting vehicles in a premium storage vault",
   },
   {
     icon: Cog,
@@ -44,6 +48,8 @@ const perspectives = [
     ],
     cta: "Learn More",
     href: "/about",
+    image: "/persona-service.png",
+    alt: "Master mechanic working on a vintage car engine in a restoration workshop",
   },
 ]
 
@@ -72,45 +78,59 @@ export function PerspectivesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className={`group relative rounded-xl p-8 flex flex-col gap-6 border transition-all duration-300 hover:-translate-y-1.5 ${
+              className={`group relative rounded-xl flex flex-col overflow-hidden border transition-all duration-300 hover:-translate-y-1.5 ${
                 p.featured
                   ? "bg-[#C9B68F]/10 border-[#C9B68F]/50 shadow-[0_0_40px_rgba(201,182,143,0.12)] hover:shadow-[0_8px_56px_rgba(201,182,143,0.2)]"
                   : "bg-[#232527] border-[rgba(255,255,255,0.06)] hover:border-[#C9B68F]/30 hover:shadow-[0_8px_40px_rgba(201,182,143,0.1)]"
               }`}
             >
-              {p.featured && (
-                <span className="absolute top-4 right-4 text-[10px] uppercase tracking-widest text-[#1E1F22] bg-[#C9B68F] px-2 py-1 rounded font-semibold">
-                  Featured
-                </span>
-              )}
-              <div className="flex flex-col gap-3">
-                <div className="p-3 bg-[#C9B68F]/10 rounded-lg w-fit">
-                  <p.icon className="w-6 h-6 text-[#C9B68F]" />
-                </div>
-                <h3 className="text-2xl font-bold text-[#E5DCC5]">{p.title}</h3>
-                <p className="text-[#A6A4A1] font-body leading-relaxed">{p.tagline}</p>
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src={p.image || "/placeholder.svg"}
+                  alt={p.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t ${
+                    p.featured ? "from-[#2a2620]" : "from-[#232527]"
+                  } via-transparent to-transparent`}
+                />
+                {p.featured && (
+                  <span className="absolute top-4 right-4 text-[10px] uppercase tracking-widest text-[#1E1F22] bg-[#C9B68F] px-2 py-1 rounded font-semibold">
+                    Featured
+                  </span>
+                )}
               </div>
+              <div className="flex flex-col gap-6 p-8 pt-5 flex-1">
+                <div className="flex flex-col gap-3">
+                  <div className="p-3 bg-[#C9B68F]/10 rounded-lg w-fit">
+                    <p.icon className="w-6 h-6 text-[#C9B68F]" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#E5DCC5]">{p.title}</h3>
+                  <p className="text-[#A6A4A1] font-body leading-relaxed">{p.tagline}</p>
+                </div>
 
-              <ul className="flex flex-col gap-2 flex-1">
-                {p.bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-2 text-[#E5DCC5] font-body text-sm">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9B68F] flex-shrink-0" />
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
+                <ul className="flex flex-col gap-2 flex-1">
+                  {p.bullets.map((bullet) => (
+                    <li key={bullet} className="flex items-start gap-2 text-[#E5DCC5] font-body text-sm">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9B68F] flex-shrink-0" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
 
-              <Link
-                href={p.href}
-                className={`inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-200 ${
-                  p.featured
-                    ? "text-[#C9B68F] hover:text-[#E5DCC5]"
-                    : "text-[#A6A4A1] hover:text-[#C9B68F]"
-                }`}
-              >
-                {p.cta}
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
+                <Link
+                  href={p.href}
+                  className={`inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-200 ${
+                    p.featured
+                      ? "text-[#C9B68F] hover:text-[#E5DCC5]"
+                      : "text-[#A6A4A1] hover:text-[#C9B68F]"
+                  }`}
+                >
+                  {p.cta}
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </div>
             </motion.div>
           ))}
         </div>
