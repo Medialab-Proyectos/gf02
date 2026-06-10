@@ -65,7 +65,7 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
                 size="lg"
-                className="bg-[#C9B68F] hover:bg-[#B49F79] text-[#1E1F22] font-semibold rounded-lg"
+                className="bg-[#C9B68F] hover:bg-[#B49F79] text-[#1E1F22] font-semibold rounded-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_4px_24px_rgba(201,182,143,0.35)] active:scale-[0.98]"
                 onClick={scrollToWaitlist}
               >
                 Start Your GarageFolio
@@ -74,7 +74,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-[rgba(201,182,143,0.15)] border border-[#C9B68F] text-[#E5DCC5] hover:bg-[#C9B68F] hover:text-[#1E1F22] rounded-lg"
+                className="bg-[rgba(201,182,143,0.15)] border border-[#C9B68F] text-[#E5DCC5] hover:bg-[#C9B68F] hover:text-[#1E1F22] rounded-lg transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
                 onClick={() => {
                   const element = document.getElementById("perspectives")
                   if (element) {

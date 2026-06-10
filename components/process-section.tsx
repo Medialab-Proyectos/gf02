@@ -56,15 +56,15 @@ export function ProcessSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="flex flex-col items-center text-center space-y-5"
+                className="group flex flex-col items-center text-center space-y-5"
               >
                 <div className="relative">
                   <img
                     src={step.image || "/placeholder.svg"}
                     alt={step.title}
-                    className="w-44 h-44 object-cover rounded-full border-4 border-[#C9B68F]/20"
+                    className="w-44 h-44 object-cover rounded-full border-4 border-[#C9B68F]/20 transition-all duration-300 group-hover:border-[#C9B68F]/60 group-hover:scale-105"
                   />
-                  <div className="absolute -bottom-2 -right-2 p-3.5 bg-[#C9B68F] rounded-full">
+                  <div className="absolute -bottom-2 -right-2 p-3.5 bg-[#C9B68F] rounded-full transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                     <step.icon className="w-5 h-5 text-[#1E1F22]" />
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export function ProcessSection() {
               e.preventDefault()
               document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })
             }}
-            className="inline-flex items-center gap-2 border border-[#C9B68F] text-[#C9B68F] px-8 py-4 rounded-lg font-semibold text-base hover:bg-[#C9B68F] hover:text-[#1E1F22] transition-all duration-300"
+            className="inline-flex items-center gap-2 border border-[#C9B68F] text-[#C9B68F] px-8 py-4 rounded-lg font-semibold text-base hover:bg-[#C9B68F] hover:text-[#1E1F22] hover:scale-[1.03] hover:shadow-[0_4px_24px_rgba(201,182,143,0.25)] active:scale-[0.98] transition-all duration-300"
           >
             See a Sample Provenance Report
           </a>

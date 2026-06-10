@@ -44,7 +44,7 @@ export function FeaturesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-[#E5DCC5] mb-4">Built for Every Detail</h2>
-          <p className="text-[#A6A4A1] font-body text-lg">Show features through storytelling, not specs.</p>
+          <p className="text-[#A6A4A1] font-body text-lg">Everything you need to tell your vehicle&apos;s story.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -55,17 +55,17 @@ export function FeaturesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group bg-[#232527] rounded-xl p-6 hover:shadow-[0_0_30px_rgba(201,182,143,0.15)] transition-all duration-300"
+              className="group bg-[#232527] rounded-xl p-6 border border-transparent hover:border-[#C9B68F]/30 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(201,182,143,0.15)] transition-all duration-300"
             >
               <div className="mb-4 overflow-hidden rounded-lg">
                 <img
                   src={feature.image || "/placeholder.svg"}
                   alt={feature.title}
-                  className="w-full object-cover object-top group-hover:scale-105 transition-transform duration-300 h-96"
+                  className="w-full object-cover object-top group-hover:scale-105 transition-transform duration-500 h-96"
                 />
               </div>
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-[#C9B68F]/10 rounded-lg">
+                <div className="p-3 bg-[#C9B68F]/10 rounded-lg transition-all duration-300 group-hover:bg-[#C9B68F]/20 group-hover:scale-110">
                   <feature.icon className="w-6 h-6 text-[#C9B68F]" />
                 </div>
                 <div>
