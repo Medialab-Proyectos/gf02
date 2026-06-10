@@ -38,7 +38,7 @@ export function WaitlistSection() {
       setEmail("")
       setInterest("")
     } catch (err) {
-      setError("Hubo un error al enviar el formulario. Por favor intenta de nuevo.")
+      setError("There was an error submitting the form. Please try again.")
       console.error('[v0] Error:', err)
     } finally {
       setIsLoading(false)
@@ -158,7 +158,7 @@ export function WaitlistSection() {
               disabled={isLoading}
               className="w-full bg-[#C9B68F] hover:bg-[#B49F79] text-[#1E1F22] font-semibold h-12 disabled:opacity-50"
             >
-              {isLoading ? "Enviando..." : "Start Your Logbook"}
+              {isLoading ? "Submitting..." : "Start Your Logbook"}
             </Button>
 
             <p className="text-[#A6A4A1] text-sm text-center font-body">No spam. Just provenance.</p>

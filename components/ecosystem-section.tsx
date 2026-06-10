@@ -125,6 +125,12 @@ export function EcosystemSection() {
             <p className="text-[#A6A4A1] font-body text-lg leading-relaxed">
               GarageFolio connects those contributions into a single transferable record.
             </p>
+            <a
+              href="/about"
+              className="inline-flex items-center gap-2 text-[#C9B68F] hover:text-[#E5DCC5] font-semibold text-base transition-colors duration-200"
+            >
+              Learn more about GarageFolio &rarr;
+            </a>
           </motion.div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import Image from "next/image"
 import { Instagram } from "lucide-react"
 
@@ -27,13 +28,13 @@ export function Footer() {
               <span className="text-2xl font-bold text-[#E5DCC5]">{""}</span>
             </button>
             <p className="text-[#A6A4A1] font-body italic">Made by enthusiasts. Built for every story.</p>
-            <div className="flex flex-col gap-1">
-              <a
+            <div className="flex flex-col gap-2">
+              <Link
                 href="/about"
                 className="inline-flex text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
               >
-                About
-              </a>
+                About GarageFolio
+              </Link>
               <a
                 href={PRIVACY_POLICY_URL}
                 className="inline-flex text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
@@ -41,6 +42,25 @@ export function Footer() {
                 Privacy Policy
               </a>
             </div>
+          </div>
+
+          <div className="flex flex-col justify-start md:items-end gap-4">
+            <Link
+              href="/#waitlist"
+              className="inline-flex items-center justify-center bg-[#C9B68F] hover:bg-[#B49F79] text-[#1E1F22] font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm"
+            >
+              Join GarageFolio
+            </Link>
+            <a
+              href="https://www.instagram.com/garagefolio?igsh=MTZxb2xsd213NmIzZg=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors"
+              aria-label="Follow us on Instagram"
+            >
+              <Instagram className="w-8 h-8" />
+            </a>
+          </div>
           </div>
 
           <div className="flex justify-start md:justify-end items-start">

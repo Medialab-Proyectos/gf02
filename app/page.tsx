@@ -28,7 +28,7 @@ export default function Home() {
       <FeaturesSection />
       {/* 7. Testimonials — Social proof */}
       <TestimonialsSection />
-      {/* 8. Quote — Authority signal */}
+      {/* 8. Quote — Authority / credibility signal (McKeel Hagerty) */}
       <CredibilitySection />
       {/* 9. Waitlist CTA — Conversion */}
       <WaitlistSection />
