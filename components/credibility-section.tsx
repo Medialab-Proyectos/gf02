@@ -9,8 +9,15 @@ export function CredibilitySection() {
   }
 
   return (
-    <section id="credibility" className="py-24 px-4 bg-[#1E1F22]">
-      <div className="container mx-auto max-w-4xl">
+    <section id="credibility" className="relative py-24 px-4 bg-[#1E1F22] overflow-hidden">
+      {/* Emotional background: photo album with missing photos, echoing the quote */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-25"
+        style={{ backgroundImage: "url(/quote-album-bg.png)" }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1E1F22] via-[#1E1F22]/60 to-[#1E1F22]" aria-hidden="true" />
+      <div className="container mx-auto max-w-4xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

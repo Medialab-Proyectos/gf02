@@ -9,18 +9,24 @@ const columns = [
     title: "Enthusiast",
     description:
       "Records scattered across phones, inboxes, folders, and filing cabinets.",
+    image: "/problem-enthusiast.png",
+    alt: "Scattered paper service records and receipts on a garage workbench",
   },
   {
     icon: Building2,
     title: "Vehicle Storage & Stewardship",
     description:
       "Custody logs, service notes, and member records scattered across inboxes, spreadsheets, and internal tools.",
+    image: "/problem-storage.png",
+    alt: "Premium car storage facility with paper custody logs and spreadsheets",
   },
   {
     icon: Users,
     title: "Future Custodians",
     description:
       "Important history disappears with every ownership transfer.",
+    image: "/problem-custodians.png",
+    alt: "Hands exchanging car keys over a nearly empty document folder",
   },
 ]
 
@@ -49,13 +55,23 @@ export function ProblemSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="group bg-[#232527] rounded-xl p-8 border border-[rgba(255,255,255,0.06)] flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#C9B68F]/40 hover:shadow-[0_8px_32px_rgba(201,182,143,0.1)]"
+              className="group bg-[#232527] rounded-xl border border-[rgba(255,255,255,0.06)] flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#C9B68F]/40 hover:shadow-[0_8px_32px_rgba(201,182,143,0.1)]"
             >
-              <div className="p-3 bg-[#C9B68F]/10 rounded-lg w-fit transition-all duration-300 group-hover:bg-[#C9B68F]/20 group-hover:scale-110">
-                <col.icon className="w-6 h-6 text-[#C9B68F]" />
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={col.image || "/placeholder.svg"}
+                  alt={col.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#232527] via-transparent to-transparent" />
               </div>
-              <h3 className="text-xl font-semibold text-[#E5DCC5]">{col.title}</h3>
-              <p className="text-[#A6A4A1] font-body leading-relaxed">{col.description}</p>
+              <div className="flex flex-col gap-4 p-8 pt-5">
+                <div className="p-3 bg-[#C9B68F]/10 rounded-lg w-fit transition-all duration-300 group-hover:bg-[#C9B68F]/20 group-hover:scale-110">
+                  <col.icon className="w-6 h-6 text-[#C9B68F]" />
+                </div>
+                <h3 className="text-xl font-semibold text-[#E5DCC5]">{col.title}</h3>
+                <p className="text-[#A6A4A1] font-body leading-relaxed">{col.description}</p>
+              </div>
             </motion.div>
           ))}
         </div>
