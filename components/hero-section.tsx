@@ -1,7 +1,6 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Play } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function HeroSection() {
@@ -49,13 +48,18 @@ export function HeroSection() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}>
-              <span className="font-extrabold text-[#C9B68F]">Prove the Value</span>{" "}
-              <span className="font-extrabold text-[#E5DCC5]">of Every Wrench Turned</span>
+            <h1 className="leading-tight text-balance" style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}>
+              <span className="font-extrabold text-[#C9B68F]">Every vehicle has a story.</span>
+              <br />
+              <span className="font-extrabold text-[#E5DCC5]">GarageFolio makes sure it stays with it.</span>
             </h1>
 
-            <p className="font-body text-[#E5DCC5] text-shadow-strong text-lg w-[65%] max-w-[560px]">
-              Build the digital record your car deserves.
+            <p className="font-body text-[#A6A4A1] text-lg max-w-[520px]">
+              The enthusiast vehicle industry has become exceptionally good at preserving cars. What remains fragmented is the history behind them.
+            </p>
+
+            <p className="font-body text-[#E5DCC5] text-lg max-w-[520px]">
+              Document, organize, and transfer the maintenance history, restoration work, stewardship records, and stories that define a vehicle&apos;s long-term credibility and value.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -64,20 +68,27 @@ export function HeroSection() {
                 className="bg-[#C9B68F] hover:bg-[#B49F79] text-[#1E1F22] font-semibold rounded-lg"
                 onClick={scrollToWaitlist}
               >
-                Become a Provenance Steward
+                Start Your GarageFolio
               </Button>
 
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-[rgba(201,182,143,0.15)] border border-[#C9B68F] text-[#E5DCC5] hover:bg-[#C9B68F] hover:text-[#1E1F22] rounded-lg opacity-0"
+                className="bg-[rgba(201,182,143,0.15)] border border-[#C9B68F] text-[#E5DCC5] hover:bg-[#C9B68F] hover:text-[#1E1F22] rounded-lg"
+                onClick={() => {
+                  const element = document.getElementById("perspectives")
+                  if (element) {
+                    const offset = 80
+                    const pos = element.getBoundingClientRect().top + window.pageYOffset - offset
+                    window.scrollTo({ top: pos, behavior: "smooth" })
+                  }
+                }}
               >
-                <Play className="w-4 h-4 mr-2" />
-                Watch Demo
+                For Vehicle Storage &amp; Stewardship
               </Button>
             </div>
 
-            <p className="text-[#C9B68F] text-[15px] font-body leading-7 my-[-20px] mx-0">
+            <p className="text-[#C9B68F] text-[15px] font-body leading-7">
               Your information is always private and secured.
             </p>
           </motion.div>

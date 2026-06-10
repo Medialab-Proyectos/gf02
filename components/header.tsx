@@ -56,28 +56,28 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <button
-              onClick={() => scrollToSection("features")}
-              className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
-            >
-              Features
-            </button>
-            <button
               onClick={() => scrollToSection("how-it-works")}
               className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
             >
               How It Works
             </button>
             <button
-              onClick={() => scrollToSection("credibility")}
+              onClick={() => scrollToSection("perspectives")}
               className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
             >
-              Testimonials
+              Who It&apos;s For
             </button>
+            <a
+              href="/about"
+              className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
+            >
+              About
+            </a>
             <a
               href={PRIVACY_POLICY_URL}
               className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
             >
-              Privacy Policy
+              Privacy
             </a>
             <Button
               onClick={() => scrollToSection("waitlist")}
@@ -108,29 +108,30 @@ export function Header() {
           >
             <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
               <button
-                onClick={() => scrollToSection("features")}
-                className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body text-left py-2"
-              >
-                Features
-              </button>
-              <button
                 onClick={() => scrollToSection("how-it-works")}
                 className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body text-left py-2"
               >
                 How It Works
               </button>
               <button
-                onClick={() => scrollToSection("credibility")}
+                onClick={() => scrollToSection("perspectives")}
                 className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body text-left py-2"
               >
-                Testimonials
+                Who It&apos;s For
               </button>
+              <a
+                href="/about"
+                className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body text-left py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </a>
               <a
                 href={PRIVACY_POLICY_URL}
                 className="text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body text-left py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Privacy Policy
+                Privacy
               </a>
               <Button
                 onClick={() => scrollToSection("waitlist")}

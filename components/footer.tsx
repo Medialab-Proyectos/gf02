@@ -27,12 +27,20 @@ export function Footer() {
               <span className="text-2xl font-bold text-[#E5DCC5]">{""}</span>
             </button>
             <p className="text-[#A6A4A1] font-body italic">Made by enthusiasts. Built for every story.</p>
-            <a
-              href={PRIVACY_POLICY_URL}
-              className="inline-flex text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
-            >
-              Privacy Policy
-            </a>
+            <div className="flex flex-col gap-1">
+              <a
+                href="/about"
+                className="inline-flex text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
+              >
+                About
+              </a>
+              <a
+                href={PRIVACY_POLICY_URL}
+                className="inline-flex text-[#E5DCC5] hover:text-[#C9B68F] transition-colors font-body"
+              >
+                Privacy Policy
+              </a>
+            </div>
           </div>
 
           <div className="flex justify-start md:justify-end items-start">

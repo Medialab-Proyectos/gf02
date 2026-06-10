@@ -1,42 +1,44 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-
-const quotes = [
-  {
-    text: "Complete documentation and provenance directly influence a vehicle’s value and collectability.",
-    source: "Hagerty",
-  },
-  {
-    text: "Listings with detailed photos, records, and history consistently perform 10% - 20% better final price.",
-    source: "Bring a Trailer",
-  },
-  {
-    text: "Well-documented service history helps retain value and buyer confidence.",
-    source: "Kelley Blue Book",
-  },
-  {
-    text: "Transparency and digital trust features increase buyer confidence.",
-    source: "Deloitte",
-  },
-]
+import { motion } from "framer-motion"
 
 export function CredibilitySection() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % quotes.length)
-    }, 8000)
-
-    return () => clearInterval(interval)
-  }, [])
-
   const scrollToWaitlist = () => {
     const element = document.getElementById("waitlist")
     element?.scrollIntoView({ behavior: "smooth" })
   }
+
+  return (
+    <section id="credibility" className="py-24 px-4 bg-[#1E1F22]">
+      <div className="container mx-auto max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center text-center gap-8"
+        >
+          {/* Decorative quote mark */}
+          <span className="text-[#C9B68F] text-8xl font-serif leading-none select-none" aria-hidden="true">
+            &ldquo;
+          </span>
+
+          <blockquote className="text-2xl md:text-3xl text-[#E5DCC5] font-body leading-relaxed max-w-3xl text-balance -mt-10">
+            Handing off a vehicle without its history is like sharing an album with half the photos missing. The car survives, but the meaning fades.
+          </blockquote>
+
+          <footer className="flex flex-col items-center gap-1">
+            <cite className="text-[#C9B68F] font-semibold not-italic text-lg">McKeel Hagerty</cite>
+            <span className="text-[#A6A4A1] font-body text-sm">CEO, Hagerty</span>
+          </footer>
+
+          {/* Divider */}
+          <div className="w-24 h-px bg-[#C9B68F]/30 mt-4" />
+        </motion.div>
+      </div>
+    </section>
+  )
+}
 
   return (
     <section id="credibility" className="py-24 px-4 bg-[#1E1F22]">

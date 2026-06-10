@@ -66,7 +66,7 @@ export function WaitlistSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#E5DCC5] mb-4">Get Early Access</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#E5DCC5] mb-4">Join GarageFolio</h2>
           <p className="text-[#A6A4A1] font-body text-lg">
             {"Great stories don't belong in dusty folders.\nPreserve your car's legacy — one log at a time.\n"}
           </p>
